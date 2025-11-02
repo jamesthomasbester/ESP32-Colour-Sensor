@@ -1,12 +1,13 @@
-# ESP32-S3 Color Sensor
+# ESP32-S3 Colour Sensor
 
-A portable color scanning device using ESP32-S3 microcontroller and TCS34725 color sensor with a 1.28" round touch LCD display. Scan colors and get HEX codes on the go!
+A portable colour scanning device using ESP32-S3 microcontroller and TCS34725 colour sensor with a 1.28" round touch LCD display. Scan colours and get HEX codes on the go!
+![wireframe](/assets/wireframe.png)
 
 ## Features
 
-- **Real-time Color Scanning**: Capture RGB values and convert to HEX codes
+- **Real-time colour Scanning**: Capture RGB values and convert to HEX codes
 - **Touch Interface**: Intuitive menu navigation on 1.28" round LCD
-- **Color History**: Store up to 5 recent scans
+- **colour History**: Store up to 5 recent scans
 - **Calibration System**: White/black point calibration for accuracy
 - **Battery Monitor**: Real-time battery voltage display
 - **Compact Design**: Portable form factor with 3D printable case
@@ -14,7 +15,7 @@ A portable color scanning device using ESP32-S3 microcontroller and TCS34725 col
 ## Hardware Components
 
 - **ESP32-S3 Touch LCD 1.28** ESP32-S3 Development Board, with 1.28inch Round Touch LCD [Link to Purchase](core-electronics.com.au/catalog/product/view/sku/WS-25098)
-- **TCS34725** RGB color sensor [Link to Purchase](https://core-electronics.com.au/tcs34725-rgb-color-sensor-for-arduino.html)
+- **TCS34725** RGB colour sensor [Link to Purchase](https://core-electronics.com.au/tcs34725-rgb-colour-sensor-for-arduino.html)
 - **Battery** LiPo 3.7V 400mAh [Link to Purchase](https://core-electronics.com.au/polymer-lithium-ion-battery-400mah-38456.html)
 - **Slide Switch** SPDT Micro Slide Switch [Link to Purchase](https://www.jaycar.com.au/spdt-micro-slide-switch/p/SS0834)
 - **screws** 4 x 5mm M3 Screws, 2 x 18mm M3 Screws, 2 x 8mm M3 Screws [Link to Purchase](https://www.amazon.com.au/dp/B0B38GL3F8?ref=ppx_yo2ov_dt_b_fed_asin_title)
@@ -23,7 +24,7 @@ A portable color scanning device using ESP32-S3 microcontroller and TCS34725 col
 ## Pin Configuration
 
 ```
-TCS34725 Color Sensor:
+TCS34725 colour Sensor:
 - SDA: GPIO 21
 - SCL: GPIO 18
 - I2C Address: 0x29
@@ -66,16 +67,16 @@ TCS34725 Color Sensor:
 
 The device boots to a main menu with three options:
 
-1. **Scan** - Capture color readings
+1. **Scan** - Capture colour readings
 2. **History** - View recent scans
 3. **Calibrate** - Calibrate sensor
 
-### Color Scanning
+### colour Scanning
 
 1. Select "scan" from main menu
 2. Place object near sensor
 3. View RGB values and HEX code
-4. Color is automatically saved to history
+4. colour is automatically saved to history
 
 ### Calibration
 
@@ -86,13 +87,13 @@ The device boots to a main menu with three options:
 
 ### History
 
-- View up to 5 recent color scans
+- View up to 5 recent colour scans
 - Shows HEX code and RGB values
 - Automatically manages storage (FIFO)
 
 ## Technical Specifications
 
-- **Color Sensor**: TCS34725 with 600ms integration time
+- **colour Sensor**: TCS34725 with 600ms integration time
 - **Display**: 240x240 pixel round LCD
 - **Touch**: Capacitive touch with gesture support
 - **Memory**: PSRAM enabled for display buffer
@@ -144,7 +145,7 @@ STL and STEP files are included in the `assets/` folder for 3D printing a custom
 
 - Use pure white and black references
 - Ensure consistent lighting
-- Recalibrate if colors appear inaccurate
+- Recalibrate if colours appear inaccurate
 
 ## Code Structure
 
@@ -157,9 +158,9 @@ STL and STEP files are included in the `assets/` folder for 3D printing a custom
 - `RGBmap()` - Map raw sensor values to RGB
 - `rgbToHex()` - Convert RGB to HEX string
 
-### Color Processing
+### colour Processing
 
-The device uses calibrated mapping to convert raw TCS34725 values to standard RGB (0-255) range, then generates HEX color codes for easy use in design applications.
+The device uses calibrated mapping to convert raw TCS34725 values to standard RGB (0-255) range, then generates HEX colour codes for easy use in design applications.
 
 ## CAD
 
